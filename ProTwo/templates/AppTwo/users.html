@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User Details</title>
+  </head>
+  <body>
+    <h1>Here are users:</h1>
+    <div class="djangotwo">
+      {% if user_details %}
+      <ol>
+        {% for person in user_details %}
+        <li>User Info</li>
+        <ul>
+          <li>First Name: {{person.first_name}}</li>
+          <li>Last Name: {{person.last_name}}</li>
+          <li>Email: {{person.email}}</li>
+        </ul>
+        {% endfor %}
+      </ol>
+      {% endif %}
+    </div>
+
+  </body>
+</html>
